@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Tractor {
+public class Tractor<FarmerType extends Farmer> {
 
     public void Tractor(FarmerType Farmer){
 
