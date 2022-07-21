@@ -1,0 +1,7 @@
+package com.zipcodewilmington.froilansfarm;
+
+public interface FarmVehicle extends Vehicle {
+
+    public void operate();
+
+}
