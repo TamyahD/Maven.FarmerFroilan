@@ -25,4 +25,8 @@ public abstract class Shelter<CreatureType> {
     public void clear() {
         if (creatureList != null) creatureList.clear();
     }
+
+
+
 }
+
