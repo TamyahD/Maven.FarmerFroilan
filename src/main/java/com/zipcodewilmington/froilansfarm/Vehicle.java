@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public abstract class Vehicle extends Rideable {
+public abstract class Vehicle<R extends Rideable> {
 
 
 
