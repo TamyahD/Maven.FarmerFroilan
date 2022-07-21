@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
-public abstract class Pilot extends Person {
+public abstract class Pilot<PilotType extends Pilot> {
 
-
-
-
+    public Pilot(String name) {
+        super(name);
+    }
 }
