@@ -1,13 +1,15 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class TomatoPlant {
+import java.util.ArrayList;
+import java.util.List;
 
-    public TomatoPlant() {
-    }
+public class TomatoPlant {
 
     public Tomato yield(){
         return new Tomato();
     }
+
+
 
 
 }
