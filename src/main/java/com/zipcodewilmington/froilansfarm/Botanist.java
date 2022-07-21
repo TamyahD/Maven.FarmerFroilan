@@ -6,5 +6,6 @@ public abstract class Botanist extends Person{
         super(name);
     }
 
-    void plant(Crop crop, CropRow cropRow);
+    void plant(Crop crop, CropRow cropRow) {
+    }
 }
