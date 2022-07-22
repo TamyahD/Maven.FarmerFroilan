@@ -8,7 +8,7 @@ public class NoiseMakerTest {
     Horse horse = new Horse();
 
     @Test
-    public void testNoise() {
+    public void testChickenNoise() {
         //Given
         //When
         //Then
@@ -17,7 +17,21 @@ public class NoiseMakerTest {
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void testNoiseNotNull() {
+    public void testChickenNoiseNotNull() {
         Assert.assertNotNull(chicken.makeNoise());
+    }
+
+    @Test
+    public void testHorseNoise() {
+        //Given
+        //When
+        //Then
+        String actual = horse.makeNoise();
+        String expected = "neigh nEigh";
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testHorseNoiseNotNull() {
+        Assert.assertNotNull(horse.makeNoise());
     }
 }
