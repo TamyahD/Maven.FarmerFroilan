@@ -1,9 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
-import junit.framework.TestCase;
+import org.junit.Assert;
 import org.junit.Test;
 
-public class NoiseMakerTest extends TestCase {
+public class NoiseMakerTest {
     Chicken chicken = new Chicken();
     Horse horse = new Horse();
 
@@ -13,11 +13,11 @@ public class NoiseMakerTest extends TestCase {
         //When
         //Then
         String actual = chicken.makeNoise();
-        String expected = "cluck cluck cluck";
-        assertEquals(expected, actual);
+        String expected = "look at all those chickens...";
+        Assert.assertEquals(expected, actual);
     }
     @Test
-    public void testNoiseType() {
-        assertTrue(chicken.makeNoise() instanceof String);
+    public void testNoiseNotNull() {
+        Assert.assertNotNull(chicken.makeNoise());
     }
 }

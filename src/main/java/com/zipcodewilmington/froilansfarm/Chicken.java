@@ -14,6 +14,6 @@ public class Chicken implements Animal {
 
     @Override
     public String makeNoise() {
-        return "cluck cluck cluck";
+        return "look at all those chickens...";
     }
 }
