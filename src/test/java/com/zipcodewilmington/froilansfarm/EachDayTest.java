@@ -17,8 +17,8 @@ public class EachDayTest {
          */
         //Froilan and Froilanda will be eager initialized
 
-        // eat a certain amount of produce in the store
-            // eat method removes the eidble from the store?
+        // add a certain amount of produce in the store
+            // eat method removes the edible from the store?
 
         // make stable
         Stable stabley = new Stable();
