@@ -26,7 +26,8 @@ public abstract class Shelter<CreatureType> {
         if (creatureList != null) creatureList.clear();
     }
 
-
-
+    public CreatureType get(int index) {
+        return creatureList.get(index);
+    }
 }
 

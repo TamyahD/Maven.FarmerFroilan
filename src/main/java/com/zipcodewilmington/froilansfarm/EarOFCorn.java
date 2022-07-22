@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class EarOFCorn extends CornStalk{
+import Produce.Edible;
 
-
+public class EarOFCorn extends Edible {
 }
