@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 import Produce.Edible;
 
-public final class Froilan extends Farmer{
+public final class Froilan extends Farmer implements Rider{
 
     private static final Froilan FROILAN = new Froilan("Froilan");
 
@@ -22,5 +22,15 @@ public final class Froilan extends Farmer{
     @Override
     public String makeNoise() {
         return "Froilan!";
+    }
+
+    @Override
+    public void mount(Rideable rideable) {
+
+    }
+
+    @Override
+    public void dismount(Rideable rideable) {
+
     }
 }
