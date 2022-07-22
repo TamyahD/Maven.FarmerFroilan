@@ -18,6 +18,11 @@ public abstract class Shelter<CreatureType> {
         return creatureList.size();
     }
 
+    public Integer size() {
+        if (creatureList == null) return 0;
+        return creatureList.size();
+    }
+
     public void remove(CreatureType creatureType) { // could throw exception
         if (creatureList != null) creatureList.remove(creatureType);
     }

@@ -23,6 +23,16 @@ public final class Farm {
     public List<Stable> getStableList() {
         return stableList;
     }
+    public Integer getTotalHorseCount() {
+        Integer total = 0;
+        for (Stable stable : getStableList()) {
+            total += stable.size();
+        }
+        return total;
+    }
+    public void addStable(Stable stable) {
+        stableList.add(stable);
+    }
 
     public List<ChickenCoop> getChickenCoopList() {
         return chickenCoopList;
