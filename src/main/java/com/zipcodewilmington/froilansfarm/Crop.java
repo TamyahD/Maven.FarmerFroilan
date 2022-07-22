@@ -1,4 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-public abstract class Crop {
+import Produce.Produce;
+
+public abstract class Crop extends Produce<Crop> {
+
 }
