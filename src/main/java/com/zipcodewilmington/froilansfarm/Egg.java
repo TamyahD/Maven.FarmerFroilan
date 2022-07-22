@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Egg {
+import Produce.Edible;
+
+public class Egg extends Edible {
 }
