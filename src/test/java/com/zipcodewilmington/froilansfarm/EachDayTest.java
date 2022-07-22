@@ -14,15 +14,15 @@ public class EachDayTest {
             Froilan eats 1 EarCorn, 2 Tomoato, and 5 Egg.
             Froilanda eats 2 EarCorn, 1 Tomoato, and 2 Egg.
          */
-        // Froilan and Froilanda will be eager initialized
-//        for (Stable stable : Farm.getStableList()) {
-//            for (Horse horse : stable) {
-//                Froilan.getInstance().mount(horse);
-//                Froilan.getInstance().dismount(horse);
-//                Froilanda.getInstance().mount(horse);
-//                Froilanda.getInstance().dismount(horse);
-//            }
-//        }
+        //Froilan and Froilanda will be eager initialized
+        for (Stable stable : Farm.getInstance().getStableList()) {
+            for (int i = 0; i < stable.getNumberOfCreature(); i++) {
+                Froilan.getFroilan().mount(stable.get(i));
+                Froilan.getFroilan().dismount(stable.get(i));
+                Froilanda.getFroilanda().mount(stable.get(i));
+                Froilanda.getFroilanda().dismount(stable.get(i));
+            }
+        }
 //        ProduceStore.getInstance().add(corn, 7);
     }
 }

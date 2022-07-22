@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public final class Farm {
@@ -10,6 +11,9 @@ public final class Farm {
     List<Vehicle> vehicleList;
 
     private Farm() {
+        stableList = new ArrayList<>();
+        chickenCoopList = new ArrayList<>();
+        vehicleList = new ArrayList<>();
     }
 
     public static Farm getInstance() {

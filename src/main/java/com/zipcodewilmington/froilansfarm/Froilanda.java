@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import Produce.Edible;
 import Produce.ProduceStore;
 
-public class Froilanda extends Farmer{
+public class Froilanda extends Farmer implements Rider{
 
     private static final Froilanda FROILANDA = new Froilanda("Froilanda");
 
@@ -53,5 +53,15 @@ public class Froilanda extends Farmer{
                 "And enterprises of great pith and moment\n" +
                 "With this regard their currents turn awry\n" +
                 "And lose the name of action.";
+    }
+
+    @Override
+    public void mount(Rideable rideable) {
+
+    }
+
+    @Override
+    public void dismount(Rideable rideable) {
+
     }
 }
