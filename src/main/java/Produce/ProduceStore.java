@@ -6,7 +6,7 @@ import java.util.Map;
 public class ProduceStore {
 
     private static final ProduceStore instance = new ProduceStore();
-    public Map<Produce<Edible>, Integer> foodStore;
+    public Map<Edible, Integer> foodStore;
 
     ProduceStore(){
         this.foodStore = new HashMap<>();
@@ -16,7 +16,7 @@ public class ProduceStore {
         return instance;
     }
 
-    public void add(Produce<Edible> edible, Integer numberOfProduce){
+    public void add(Edible edible, Integer numberOfProduce){
         // check if produce in the keyset
         if (foodStore.containsKey(edible)) {
             foodStore.put(edible, numberOfProduce + foodStore.get(edible));
@@ -26,24 +26,22 @@ public class ProduceStore {
         }
     }
 
-    public void add(Produce<Edible> edibleProduce){
+    public void add(Edible edibleProduce){
         add(edibleProduce, 1);
     }
 
-    public void remove(Produce<Edible> edible) {
+    public void remove(Edible edible) {
         this.foodStore.remove(edible);
     }
 
-    public Integer getQuantityInStorage(Produce<Edible> edible) {
+    public Integer getQuantityInStorage(Edible edible) {
 
         return this.foodStore.get(edible);
     }
 
-    public Boolean contains(Produce<Edible> edible){
+    public Boolean contains(Edible edible){
         return this.foodStore.containsKey(edible);
     }
-
-
 
 
 }
