@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public interface Animal extends NoiseMaker, Eater{
+public interface Animal extends NoiseMaker, Eater {
 }
