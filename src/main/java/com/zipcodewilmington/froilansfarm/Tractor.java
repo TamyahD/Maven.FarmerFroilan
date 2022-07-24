@@ -5,7 +5,12 @@ public class Tractor<FarmerType extends Farmer> extends Rideable {
 
     }
 
+    @Override
+    public String makeNoise(){return "Vrooooooom! ChunkaChunkaCoughChunka PuhhtPuuhhht Vrooooooom!";}
+
     public void harvest(Crop crop) {
+
+
 
     }
 }
