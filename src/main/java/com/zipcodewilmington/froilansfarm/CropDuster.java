@@ -1,15 +1,26 @@
 package com.zipcodewilmington.froilansfarm;
 
+import java.util.List;
+
 public class CropDuster<PilotType extends Pilot> extends Rideable {
 
-    public CropDuster(PilotType pilot){
-    };
+    Pilot pilot;
 
-    public void fertilize(){
+    public CropDuster(PilotType pilot){
+        this.pilot = pilot;
     }
 
-    public void fly(){
+    public void fertilize(CropRow<Crop> croprow){
+        List<Crop> cropList = croprow.getCropList();
+        for (Crop crop : cropList) {
+            crop.setHasBeenHarvested(true);
+        }
+        croprow.setCropRow(cropList);
+    }
+
+    public void fly(CropRow<Crop> cropRow){
         makeNoise();
+        fertilize(cropRow);
     };
 
 
