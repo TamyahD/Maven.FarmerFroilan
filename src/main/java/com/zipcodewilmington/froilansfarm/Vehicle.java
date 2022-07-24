@@ -1,5 +1,5 @@
 package com.zipcodewilmington.froilansfarm;
 
-public abstract class Vehicle<R extends Rideable> implements NoiseMaker {
+public interface Vehicle<R extends Rideable> extends NoiseMaker {
 
 }
