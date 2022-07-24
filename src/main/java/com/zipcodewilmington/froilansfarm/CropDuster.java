@@ -13,7 +13,7 @@ public class CropDuster<PilotType extends Pilot> extends Rideable {
     public void fertilize(CropRow<Crop> croprow){
         List<Crop> cropList = croprow.getCropList();
         for (Crop crop : cropList) {
-            crop.setHasBeenHarvested(true);
+            crop.setHasBeenFertilized(true);
         }
         croprow.setCropRow(cropList);
     }

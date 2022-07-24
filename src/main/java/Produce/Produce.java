@@ -1,11 +1,13 @@
 package Produce;
 
+import com.zipcodewilmington.froilansfarm.Crop;
+
 public abstract class Produce<EdibleType extends Edible>{
 
     private Boolean hasBeenFertilized;
     private Boolean hasBeenHarvested;
 
-    public abstract EdibleType yield();
+    public abstract void yield(Crop crop);
 
     public Boolean getHasBeenFertilized() {
         return hasBeenFertilized;
