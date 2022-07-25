@@ -7,6 +7,7 @@ public final class Froilan extends Farmer implements Rider{
     private static final Froilan FROILAN = new Froilan("Froilan");
     private Froilan(String name) {
         super(name);
+
     }
     public static Froilan getFroilan() {
         return FROILAN;

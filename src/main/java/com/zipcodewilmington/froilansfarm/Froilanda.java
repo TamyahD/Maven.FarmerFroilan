@@ -13,6 +13,7 @@ public class Froilanda extends Pilot implements Rider{
 
     private Froilanda(String name) {
         super(name);
+
     }
 
     @Override
