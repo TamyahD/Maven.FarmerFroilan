@@ -5,14 +5,14 @@ import Produce.Edible;
 public final class Froilan extends Farmer implements Rider{
 
     private static final Froilan FROILAN = new Froilan("Froilan");
-
+    private Froilan(String name) {
+        super(name);
+        Farm.getInstance().getFarmHouse().add(this);
+    }
     public static Froilan getFroilan() {
         return FROILAN;
     }
 
-    private Froilan(String name) {
-        super(name);
-    }
 
     @Override
     public void eat(Edible edible) {

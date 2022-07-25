@@ -5,7 +5,7 @@ import java.util.List;
 
 public final class Farm {
     private static final Farm FARM = new Farm();
-
+    FarmHouse farmHouse;
     List<Stable> stableList;
     List<ChickenCoop> chickenCoopList;
     List<Vehicle> vehicleList;
@@ -32,6 +32,18 @@ public final class Farm {
     }
     public void addStable(Stable stable) {
         stableList.add(stable);
+    }
+
+    public void addChickenCoop(ChickenCoop coop) {
+        chickenCoopList.add(coop);
+    }
+
+    public FarmHouse getFarmHouse() {
+        return farmHouse;
+    }
+
+    public void setFarmHouse(FarmHouse farmHouse) {
+        this.farmHouse = farmHouse;
     }
 
     public List<ChickenCoop> getChickenCoopList() {
