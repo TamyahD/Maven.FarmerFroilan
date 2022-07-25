@@ -20,10 +20,11 @@ public class Tractor<FarmerType extends Farmer> extends Rideable {
         for (Crop crop : cropList) {
             if (crop.getHasBeenFertilized()) {
                 crop.setHasBeenHarvested(true);
-                cropList.remove(crop);
                 crop.yield(crop);
-                }
+                cropList.remove(crop);
+            }
         }
+        cropRow.setCropRow(cropList);
     }
 
     public void operate(CropRow<Crop> cropRow){
