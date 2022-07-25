@@ -24,13 +24,13 @@ public abstract class Shelter<CreatureType> implements Iterable<CreatureType> {
         return creatureList.size();
     }
 
-//    public void remove(CreatureType creatureType) { // could throw exception
-//        if (creatureList != null) creatureList.remove(creatureType);
-//    }
+    public void remove(CreatureType creatureType) { // could throw exception
+        if (creatureList != null) creatureList.remove(creatureType);
+    }
 
-//    public void clear() {
-//        if (creatureList != null) creatureList.clear();
-//    }
+    public void clear() {
+        if (creatureList != null) creatureList.clear();
+    }
 
     public CreatureType get(int index) {
         return creatureList.get(index);
