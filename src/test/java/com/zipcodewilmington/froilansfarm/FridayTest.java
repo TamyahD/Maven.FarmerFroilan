@@ -1,33 +1,22 @@
 package com.zipcodewilmington.froilansfarm;
 
 import Produce.ProduceStore;
-import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
-public class EachDayTest {
+import java.util.ArrayList;
+import java.util.List;
+
+public class FridayTest {
+
     @Test
     public void eachDayTest() {
-        /*
-        Every morning, Froilan and Froilanda begin their morning by
-            Riding each Horse in each Stable.
-            Feeding each Horse 3 ear of Corn.
-            For breakfast,
-            Froilan eats 1 EarCorn, 2 Tomoato, and 5 Egg.
-            Froilanda eats 2 EarCorn, 1 Tomoato, and 2 Egg.
-         */
-        //Froilan and Froilanda will be eager initialized
 
-        // add a certain amount of produce in the store
-            // eat method removes the edible from the store?
-
-        // make stable
         Stable stabley = new Stable();
-        FarmHouse farmHouse = new FarmHouse();
-        // put 10 horses in 3 stables
         while (Farm.getInstance().getTotalHorseCount() < 10) {
             Horse myHorse = new Horse();
 
-            for (int i = Farm.getInstance().getStableList().size()-1; i < Farm.getInstance().getStableList().size(); i++) {
+            for (int i = Farm.getInstance().getStableList().size() - 1; i < Farm.getInstance().getStableList().size(); i++) {
                 if (Farm.getInstance().getStableList().get(i).size() < Farm.getInstance().getStableList().get(i).getMaxNumberOfHorses()) {
                     Farm.getInstance().getStableList().get(i).add(myHorse);
                     System.out.println(Farm.getInstance().getTotalHorseCount() + " horses");
@@ -41,11 +30,6 @@ public class EachDayTest {
                 }
             }
         }
-
-        // Assert that there are 3 stables
-        Integer expected = 10;
-        Assert.assertEquals(expected, Farm.getInstance().getTotalHorseCount());
-        Assert.assertEquals(3, Farm.getInstance().getStableList().size());
 
         for (Stable stable : Farm.getInstance().getStableList()) {
             for (int k = 0; k < stable.getNumberOfCreature(); k++) {
@@ -75,5 +59,50 @@ public class EachDayTest {
         Froilanda.getFroilanda().eat(new Egg());
         Froilanda.getFroilanda().eat(new Egg());
         System.out.println(Froilanda.getFroilanda().makeNoise());
+
+
+
+        CropDuster<Froilanda> cd = new CropDuster<>(Froilanda.getFroilanda());
+        Field field = new Field();
+        CropRow<Crop> cropRow = new CropRow<>();
+
+        List<CropRow<Crop>> hvf = new ArrayList<>();
+
+        hvf.add(new CropRow<>());
+        Froilanda.getFroilanda().mount(cd);
+        field.setFieldList(hvf);
+        hvf = field.getFieldList();
+        for (int i = 0; i < hvf.size(); i++) {
+            cd.fly(hvf.get(i));
+        }
+
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+
+
+        Tractor<Froilan> frolianTractor = new Tractor<>(Froilan.getFroilan());
+        Froilan.getFroilan().mount(frolianTractor);
+
+        for(CropRow<Crop> crop : hvf) {
+            frolianTractor.operate(crop);
+        }
+        Froilan.getFroilan().dismount(frolianTractor);
+
+//        ProduceStore.getInstance().getQuantityInStorage();
+
+
     }
 }
