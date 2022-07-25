@@ -1,22 +1,13 @@
 package com.zipcodewilmington.froilansfarm;
 
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.*;
 
 public class ThursdayTest {
-    /*
-    What will the farmers be doing on Thursday?
-
-    First, do EachDayTest
-    then...
-
-     */
 
     @Test
-    public void eachDayTest() {
+    public void ThursdayTest() {
 
         Stable stabley = new Stable();
         while (Farm.getInstance().getTotalHorseCount() < 10) {
@@ -36,10 +27,6 @@ public class ThursdayTest {
                 }
             }
         }
-
-        Integer expected = 10;
-        Assert.assertEquals(expected, Farm.getInstance().getTotalHorseCount());
-        Assert.assertEquals(3, Farm.getInstance().getStableList().size());
 
         for (Stable stable : Farm.getInstance().getStableList()) {
             for (int k = 0; k < stable.getNumberOfCreature(); k++) {
@@ -79,7 +66,6 @@ public class ThursdayTest {
         for (int i = 0; i < hvf.size(); i++) {
             cd.fly(hvf.get(i));
         }
-
         Froilan.getFroilan().makeNoise();
         Froilan.getFroilan().makeNoise();
         Froilan.getFroilan().makeNoise();
@@ -95,10 +81,5 @@ public class ThursdayTest {
         Froilan.getFroilan().makeNoise();
         Froilan.getFroilan().makeNoise();
         Froilan.getFroilan().makeNoise();
-
-
-
-
-
     }
 }

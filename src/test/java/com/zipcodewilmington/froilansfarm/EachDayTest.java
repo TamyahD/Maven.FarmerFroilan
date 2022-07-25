@@ -22,6 +22,7 @@ public class EachDayTest {
 
         // make stable
         Stable stabley = new Stable();
+        FarmHouse farmHouse = new FarmHouse();
         // put 10 horses in 3 stables
         while (Farm.getInstance().getTotalHorseCount() < 10) {
             Horse myHorse = new Horse();
