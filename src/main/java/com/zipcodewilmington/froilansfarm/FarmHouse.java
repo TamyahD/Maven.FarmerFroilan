@@ -1,11 +1,18 @@
 package com.zipcodewilmington.froilansfarm;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public abstract class FarmHouse extends Shelter<Person> {
+public class FarmHouse extends Shelter<Person> {
     Shelter<Person> personList;
-
-    public FarmHouse () {
-
+    public Shelter<Person> getPersonList() {
+        return personList;
+    }
+    public void setPersonList(Shelter<Person> personList) {
+        this.personList = personList;
+    }
+    @Override
+    public Iterator<Person> iterator() {
+        return creatureList.iterator();
     }
 }
