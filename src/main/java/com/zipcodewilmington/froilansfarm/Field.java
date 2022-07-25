@@ -1,10 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Field extends CropRow<Crop> {
 
@@ -16,6 +13,11 @@ public class Field extends CropRow<Crop> {
 
     public void setFieldList(List<CropRow<Crop>> fieldList) {
         this.fieldList = fieldList;
+    }
+
+    public CropRow<Crop> addCropRow(CropRow<Crop> cropRow) {
+        fieldList.add(cropRow);
+        return cropRow;
     }
 
     public List<CropRow<Crop>> getFieldList() {
