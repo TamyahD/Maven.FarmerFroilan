@@ -13,7 +13,7 @@ public class Froilanda extends Pilot implements Rider{
 
     private Froilanda(String name) {
         super(name);
-        Farm.getInstance().getFarmHouse().add(this);
+//        Farm.getInstance().getFarmHouse().add(this);
     }
 
     @Override
