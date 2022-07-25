@@ -64,6 +64,7 @@ public class MondayTest {
 
         for (Chicken c : coop1) {
             c.makeNoise();
+            c.eat(new EarOFCorn());
         }
 
         Assert.assertTrue(coop1.size() <= coop1.getMaxNumberOfChickens());
