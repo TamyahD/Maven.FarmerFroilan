@@ -3,14 +3,10 @@ package com.zipcodewilmington.froilansfarm;
 import Produce.Edible;
 
 public class Chicken implements Animal {
-    public Chicken() {
-
-    }
+    public Chicken() {}
 
     @Override
-    public void eat(Edible edible) {
-
-    }
+    public void eat(Edible edible) {}
 
     @Override
     public String makeNoise() {

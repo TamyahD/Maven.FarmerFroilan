@@ -56,7 +56,7 @@ public class MondayTest {
     }
 
     @Test
-    public void countChickens() {
+    public void chickenCheck() {
         ChickenCoop coop1 = new ChickenCoop();
 
         coop1.add(new Chicken());
@@ -64,9 +64,11 @@ public class MondayTest {
 
         for (Chicken c : coop1) {
             c.makeNoise();
+            c.eat(new EarOFCorn());
         }
 
         Assert.assertTrue(coop1.size() <= coop1.getMaxNumberOfChickens());
+        Assert.assertTrue(coop1 instanceof ChickenCoop);
     }
 
 }
