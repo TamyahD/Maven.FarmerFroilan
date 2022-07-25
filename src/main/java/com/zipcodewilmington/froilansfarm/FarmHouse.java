@@ -4,12 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class FarmHouse extends Shelter<Person> {
-    Shelter<Person> personList;
-    public Shelter<Person> getPersonList() {
-        return personList;
-    }
-    public void setPersonList(Shelter<Person> personList) {
-        this.personList = personList;
+    public FarmHouse() {
+        Farm.getInstance().setFarmHouse(this);
     }
     @Override
     public Iterator<Person> iterator() {

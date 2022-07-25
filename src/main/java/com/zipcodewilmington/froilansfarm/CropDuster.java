@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 import java.util.List;
 
-public class CropDuster<PilotType extends Pilot> extends Rideable {
+public class CropDuster<PilotType extends Pilot> implements Aircraft {
 
     Pilot pilot;
 
@@ -21,7 +21,7 @@ public class CropDuster<PilotType extends Pilot> extends Rideable {
     public void fly(CropRow<Crop> cropRow){
         makeNoise();
         fertilize(cropRow);
-    };
+    }
 
 
     @Override
