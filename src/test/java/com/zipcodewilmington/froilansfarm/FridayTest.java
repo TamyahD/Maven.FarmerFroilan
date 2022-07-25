@@ -9,7 +9,9 @@ import java.util.List;
 
 public class FridayTest {
 
-    @Test
+    //
+
+    @Before
     public void eachDayTest() {
 
         Stable stabley = new Stable();
@@ -60,13 +62,15 @@ public class FridayTest {
         Froilanda.getFroilanda().eat(new Egg());
         System.out.println(Froilanda.getFroilanda().makeNoise());
 
+    }
 
-
+    List<CropRow<Crop>> hvf = new ArrayList<>();
+    @Test
+    public void thursdayTest() {
         CropDuster<Froilanda> cd = new CropDuster<>(Froilanda.getFroilanda());
         Field field = new Field();
         CropRow<Crop> cropRow = new CropRow<>();
 
-        List<CropRow<Crop>> hvf = new ArrayList<>();
 
         hvf.add(new CropRow<>());
         Froilanda.getFroilanda().mount(cd);
@@ -92,17 +96,26 @@ public class FridayTest {
         Froilan.getFroilan().makeNoise();
         Froilan.getFroilan().makeNoise();
 
+    }
+
+    @Test
+    public void fridayTest_Harvest(){
+
 
         Tractor<Froilan> frolianTractor = new Tractor<>(Froilan.getFroilan());
         Froilan.getFroilan().mount(frolianTractor);
 
-        for(CropRow<Crop> crop : hvf) {
+        for (CropRow<Crop> crop : hvf) {
             frolianTractor.operate(crop);
         }
         Froilan.getFroilan().dismount(frolianTractor);
 
-//        ProduceStore.getInstance().getQuantityInStorage();
+    }
 
+
+    @Test
+    public void fridayTest_FarmHouse(){
+        Farm.getInstance().getFarmHouse();
 
     }
 }
