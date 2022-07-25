@@ -104,14 +104,5 @@ public class FridayTest {
 //        ProduceStore.getInstance().getQuantityInStorage();
 
 
-
-
-
-
-
-
-
-
-
     }
 }

@@ -1,9 +1,10 @@
 package com.zipcodewilmington.froilansfarm;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public abstract class Shelter<CreatureType> {
+public abstract class Shelter<CreatureType> implements Iterable<CreatureType> {
     List<CreatureType> creatureList;
 
     public void add(CreatureType creatureType) {
