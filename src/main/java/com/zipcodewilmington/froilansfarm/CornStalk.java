@@ -1,10 +1,10 @@
 package com.zipcodewilmington.froilansfarm;
 
+import Produce.ProduceStore;
+
 public class CornStalk extends Crop {
-    public EarOFCorn yield(){
-        if (getHasBeenFertilized()) {
-            setHasBeenHarvested(true);
-            return new EarOFCorn();
-        } else { return null; }
+    public void yield(Crop crop){
+        EarOFCorn corn = new EarOFCorn();
+            ProduceStore.getInstance().add(corn);
     }
 }

@@ -1,24 +1,24 @@
 package com.zipcodewilmington.froilansfarm;
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Field extends CropRow<Crop> {
 
-    CropRow<Crop> cropRow;
-
-    Map<Integer, List<Crop>> fieldMap;
+    List<CropRow<Crop>> fieldList;
 
     public Field() {
-        fieldMap = new HashMap<>();
+        fieldList = new ArrayList<>();
     }
 
-
-    public CropRow<Crop> getCropRow() {
-        return cropRow;
+    public void setFieldList(List<CropRow<Crop>> fieldList) {
+        this.fieldList = fieldList;
     }
 
-
-
+    public List<CropRow<Crop>> getFieldList() {
+        return fieldList;
+    }
 }
