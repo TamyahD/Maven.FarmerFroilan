@@ -6,7 +6,7 @@ import org.junit.Test;
 public class MondayTest {
 
     @Test
-    public void rideHorsesStable1() {
+    public void rideAndFeedHorsesStable1() {
 
         Stable stable1 = new Stable();
 
@@ -53,6 +53,20 @@ public class MondayTest {
             System.out.println("WUBALUBBADUBDUB!");
             Froilan.getFroilan().dismount(h);
         }
+    }
+
+    @Test
+    public void countChickens() {
+        ChickenCoop coop1 = new ChickenCoop();
+
+        coop1.add(new Chicken());
+        coop1.add(new Chicken());
+
+        for (Chicken c : coop1) {
+            c.makeNoise();
+        }
+
+        Assert.assertTrue(coop1.size() <= coop1.getMaxNumberOfChickens());
     }
 
 }
