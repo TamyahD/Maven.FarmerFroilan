@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
+import sun.security.krb5.internal.crypto.HmacSha1Aes128CksumType;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
@@ -10,6 +12,10 @@ public class ChickenCoop extends Shelter<Chicken>{
 
     public ChickenCoop() {
         Farm.getInstance().addChickenCoop(this);
+    }
+
+    public int getMaxNumberOfChickens() {
+        return maxNumberOfChickens;
     }
 
     @Override
