@@ -1,15 +1,16 @@
 package com.zipcodewilmington.froilansfarm;
 
 import Produce.Edible;
+import Produce.ProduceStore;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TomatoPlant extends Crop{
-    public Tomato yield() {
-        if (getHasBeenFertilized()) {
-            setHasBeenHarvested(true);
-            return new Tomato();
-        } else { return null; }
+public class TomatoPlant extends Crop {
+
+    @Override
+    public void yield(Crop crop) {
+        Tomato tomato = new Tomato();
+            ProduceStore.getInstance().add(tomato);
     }
 }
