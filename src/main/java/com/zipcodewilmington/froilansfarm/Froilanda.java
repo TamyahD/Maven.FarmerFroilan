@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import Produce.Edible;
 import Produce.ProduceStore;
 
-public class Froilanda extends Farmer implements Rider{
+public class Froilanda extends Pilot implements Rider{
 
     private static final Froilanda FROILANDA = new Froilanda("Froilanda");
 
