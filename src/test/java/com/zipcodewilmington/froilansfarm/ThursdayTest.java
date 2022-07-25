@@ -37,10 +37,6 @@ public class ThursdayTest {
             }
         }
 
-        Integer expected = 10;
-        Assert.assertEquals(expected, Farm.getInstance().getTotalHorseCount());
-        Assert.assertEquals(3, Farm.getInstance().getStableList().size());
-
         for (Stable stable : Farm.getInstance().getStableList()) {
             for (int k = 0; k < stable.getNumberOfCreature(); k++) {
                 System.out.println("Yeehaw!");
