@@ -17,10 +17,6 @@ public abstract class Produce<EdibleType extends Edible>{
         this.hasBeenFertilized = hasBeenFertilized;
     }
 
-    public Boolean getHasBeenHarvested() {
-        return hasBeenHarvested;
-    }
-
     public void setHasBeenHarvested(Boolean hasBeenHarvested) {
         this.hasBeenHarvested = hasBeenHarvested;
     }
