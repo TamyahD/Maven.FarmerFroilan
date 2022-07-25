@@ -2,7 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 import Produce.Edible;
 
-public class Horse extends Rideable implements Animal {
+public class Horse implements Animal, Rideable {
     public Horse() {
 
     }
