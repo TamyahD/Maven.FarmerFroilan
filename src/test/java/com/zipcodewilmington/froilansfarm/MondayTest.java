@@ -2,6 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 import org.junit.Assert;
 import org.junit.Test;
+import java.util.*;
 
 public class MondayTest {
 
@@ -71,4 +72,40 @@ public class MondayTest {
         Assert.assertTrue(coop1 instanceof ChickenCoop);
     }
 
+    @Test
+    public void froilandaFlies() {
+        Field f = new Field();
+        List<CropRow<Crop>> cropRowList = f.getFieldList();
+
+        CropDuster cd = new CropDuster(Froilanda.getFroilanda());
+        Froilanda.getFroilanda().mount(cd);
+        for (int i = 0; i < cropRowList.size(); i++) {
+            cd.fly(cropRowList.get(i));
+        }
+    }
+
+    @Test
+    public void froilanBreakfast() {
+        Froilan.getFroilan().eat(new EarOFCorn());
+
+        Froilan.getFroilan().eat(new Tomato());
+        Froilan.getFroilan().eat(new Tomato());
+
+        Froilan.getFroilan().eat(new Egg());
+        Froilan.getFroilan().eat(new Egg());
+        Froilan.getFroilan().eat(new Egg());
+        Froilan.getFroilan().eat(new Egg());
+        Froilan.getFroilan().eat(new Egg());
+    }
+
+    @Test
+    public void froilandaBreakfast() {
+        Froilan.getFroilan().eat(new EarOFCorn());
+        Froilan.getFroilan().eat(new EarOFCorn());
+
+        Froilan.getFroilan().eat(new Tomato());
+
+        Froilan.getFroilan().eat(new Egg());
+        Froilan.getFroilan().eat(new Egg());
+    }
 }
