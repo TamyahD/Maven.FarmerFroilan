@@ -8,6 +8,8 @@ public class ThursdayTest {
 
     @Test
     public void ThursdayTest() {
+        CropDuster<Froilanda> cd = new CropDuster<>(Froilanda.getFroilanda());
+        Field field = new Field();
 
         Stable stabley = new Stable();
         while (Farm.getInstance().getTotalHorseCount() < 10) {
@@ -56,11 +58,26 @@ public class ThursdayTest {
         Froilanda.getFroilanda().eat(new Egg());
         Froilanda.getFroilanda().eat(new Egg());
         System.out.println(Froilanda.getFroilanda().makeNoise());
-
-        CropDuster<Froilanda> cd = new CropDuster<>(Froilanda.getFroilanda());
-        Field field = new Field();
-
-        List<CropRow<Crop>> hvf;
+        
+        List<Crop> cornList = new ArrayList<>();
+        List<Crop> tomatoList = new ArrayList<>();
+        TomatoPlant tp = new TomatoPlant();
+        CornStalk cs = new CornStalk();
+        cornList.add(cs);
+        cornList.add(cs);
+        cornList.add(cs);
+        cornList.add(cs);
+        cornList.add(cs);
+        tomatoList.add(tp);
+        tomatoList.add(tp);
+        tomatoList.add(tp);
+        tomatoList.add(tp);
+        tomatoList.add(tp);
+        CropRow<Crop> cornRow = new CropRow();
+        CropRow<Crop> tomRow = new CropRow();
+        List<CropRow<Crop>> hvf = new ArrayList<>();
+        hvf.add(cornRow);
+        hvf.add(tomRow);
         Froilanda.getFroilanda().mount(cd);
         hvf = field.getFieldList();
         for (int i = 0; i < hvf.size(); i++) {
@@ -81,5 +98,9 @@ public class ThursdayTest {
         Froilan.getFroilan().makeNoise();
         Froilan.getFroilan().makeNoise();
         Froilan.getFroilan().makeNoise();
+        
+        
+        
+        
     }
 }

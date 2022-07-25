@@ -1,10 +1,12 @@
 package com.zipcodewilmington.froilansfarm;
 
+
 import Produce.ProduceStore;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class EachDayTest {
+
     @Test
     public void eachDayTest() {
         /*
@@ -18,7 +20,7 @@ public class EachDayTest {
         //Froilan and Froilanda will be eager initialized
 
         // add a certain amount of produce in the store
-            // eat method removes the edible from the store?
+        // eat method removes the edible from the store?
 
         // make stable
         Stable stabley = new Stable();
