@@ -5,7 +5,7 @@ import Produce.ProduceStore;
 
 import java.util.List;
 
-public class Tractor<FarmerType extends Farmer> extends Rideable {
+public class Tractor<FarmerType extends Farmer> implements Rideable {
 
     FarmerType farmer;
     public Tractor(FarmerType farmer) {
