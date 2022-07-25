@@ -34,6 +34,10 @@ public final class Farm {
         stableList.add(stable);
     }
 
+    public void addChickenCoop(ChickenCoop coop) {
+        chickenCoopList.add(coop);
+    }
+
     public List<ChickenCoop> getChickenCoopList() {
         return chickenCoopList;
     }
