@@ -11,7 +11,10 @@ public class Froilanda extends Pilot implements Rider{
         return FROILANDA;
     }
 
-    private Froilanda(String name) {super(name);}
+    private Froilanda(String name) {
+        super(name);
+        Farm.getInstance().getFarmHouse().add(this);
+    }
 
     @Override
     public void eat(Edible edible) {
