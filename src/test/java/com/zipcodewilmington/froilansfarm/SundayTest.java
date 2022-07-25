@@ -1,36 +1,39 @@
 package com.zipcodewilmington.froilansfarm;
 
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.text.Format;
 
 public class SundayTest {
     @Test
     public void sundayTest() {
+        //Given
         Field field = new Field();
-        CropRow cropRow1 = new CropRow<>();
-        CropRow cropRow2 = new CropRow<>();
-        CropRow cropRow3 = new CropRow<>();
-//        cropRow1.plantCrop(new TomatoPlant());
-//        cropRow2.plantCrop(new TomatoPlant());
-//        cropRow1.plantCrop(new TomatoPlant());
+        CropRow<Crop> cropRow1 = new CropRow<>();
+        CropRow<Crop> cropRow2 = new CropRow<>();
+        CropRow<Crop> cropRow3 = new CropRow<>();
+
+
+        //When
         for (int row=1; row<=3; row++) {
             for (int col=1; col<=3; col++) {
-                if (row %2 ==0) {
-                    Froilan.getFroilan().plant(new TomatoPlant(), field.addCropRow(cropRow1));
-                }
-                else if(row %2 !=0) {
-                    Froilan.getFroilan().plant(new CornStalk(), field.addCropRow(cropRow2));
+                switch (row) {
+                    case 1:
+                        Froilan.getFroilan().plant(new TomatoPlant(), field.addCropRow(cropRow1));
+                        break;
+                    case 2:
+                        Froilan.getFroilan().plant(new CornStalk(), field.addCropRow(cropRow2));
+                        break;
+                    case 3:
+                        Froilan.getFroilan().plant(new TomatoPlant(), field.addCropRow(cropRow3));
                 }
             }
         }
-//        cropRow.plantCrop(new TomatoPlant());
-//        cropRow.plantCrop(new CornStalk());
-//        cropRow.plantCrop(new TomatoPlant());
-//        cropRow.plantCrop(new TomatoPlant());
-//
-//        for (int row=1; row<=cropRow.getCropList().size(); row++) {
-//            Froilan.getFroilan().plant(cropRow.getCropList().get(row), new );
-////            if (row==1) {
-////            }
-//        }
+
+        //Then
+//        TomatoPlant tp = new TomatoPlant();
+        CropRow<Crop> tp = field.fieldList.get(1);
+//        Assert.assertTrue(tp.getClass().equals(TomatoPlant)));
     }
 }
