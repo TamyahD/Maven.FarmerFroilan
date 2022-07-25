@@ -1,19 +1,10 @@
 package com.zipcodewilmington.froilansfarm;
 
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.*;
 
 public class ThursdayTest {
-    /*
-    What will the farmers be doing on Thursday?
-
-    First, do EachDayTest
-    then...
-
-     */
 
     @Test
     public void eachDayTest() {
@@ -76,25 +67,22 @@ public class ThursdayTest {
             cd.fly(hvf.get(i));
         }
 
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
-        Froilan.getFroilan().makeNoise();
 
-
-
-
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
+        Froilan.getFroilan().makeNoise();
 
     }
 }
